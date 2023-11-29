@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+#QML libraries
+qrc_qmake_qmake_immediate.*
+*qmake*
+Makefile
+bin/
