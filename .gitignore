@@ -33,7 +33,5 @@
 bin/
 
 #QML libraries
-qrc_qmake_qmake_immediate.*
-*qmake*
 Makefile
-moc*
+temp/

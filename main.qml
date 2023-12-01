@@ -37,5 +37,6 @@ Rectangle {
         anchors.horizontalCenter: page.horizontalCenter
         anchors.top: password.bottom
         KeyNavigation.backtab: password
+        onPressed: greeter.setPassword(password.text)
     }
 }

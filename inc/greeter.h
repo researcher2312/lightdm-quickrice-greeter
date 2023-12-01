@@ -1,11 +1,14 @@
 #include <QString>
-#include <QObject>
+#include <QLightDM/Greeter>
 
 class GreeterProxy : public QObject
 {
     Q_OBJECT
 public:
-    Q_INVOKABLE void setPassword(QString password) {m_password = password;}
+    GreeterProxy();
+    ~GreeterProxy();
+    Q_INVOKABLE void setPassword(QString password);
 private:
+    QLightDM::Greeter* m_greeter;
     QString m_password;
 };

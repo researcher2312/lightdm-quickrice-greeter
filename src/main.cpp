@@ -1,5 +1,3 @@
-#include <lightdm.h>
-
 #include <QGuiApplication>
 #include <QQuickView>
 #include <QQmlContext>
