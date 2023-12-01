@@ -8,7 +8,7 @@ Rectangle {
 
     Text {
         id: helloText
-        text: "Hello world!"
+        text: "Login Manager"
         y: 30
         anchors.horizontalCenter: page.horizontalCenter
         font.pointSize: 24; font.bold: true
@@ -27,7 +27,15 @@ Rectangle {
         y: 30
         color: "black"
         cursorVisible: true
+        KeyNavigation.tab: loginButton
         anchors.horizontalCenter: page.horizontalCenter
         anchors.top: userName.bottom
+    }
+    Button {
+        id: loginButton
+        text: "Log In"
+        anchors.horizontalCenter: page.horizontalCenter
+        anchors.top: password.bottom
+        KeyNavigation.backtab: password
     }
 }
