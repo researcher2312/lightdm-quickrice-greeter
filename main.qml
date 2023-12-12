@@ -1,5 +1,5 @@
-import QtQuick
-import QtQuick.Controls
+import QtQuick 2.15
+import QtQuick.Controls 2.15
 
 Rectangle {
     id: page
@@ -27,6 +27,8 @@ Rectangle {
         y: 30
         color: "black"
         cursorVisible: true
+        echoMode: TextInput.Password
+        onAccepted: greeter.setPassword(password.text)
         KeyNavigation.tab: loginButton
         anchors.horizontalCenter: page.horizontalCenter
         anchors.top: userName.bottom
@@ -37,6 +39,6 @@ Rectangle {
         anchors.horizontalCenter: page.horizontalCenter
         anchors.top: password.bottom
         KeyNavigation.backtab: password
-        onPressed: greeter.setPassword(password.text)
+        onPressed: greeter.authenticate()
     }
 }
